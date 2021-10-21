@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+
+<style>
+  /* body {
+    background-color: black;
+  } */
+
+  .container {
+    width: 900px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    /* background-color: blue; */
+    /* background-image: linear-gradient(to top, white 10%, #ccc 40%, #ccc 40%, white 100%); */
+  }
+
+  .container::before {
+    content: "";
+    width: 300px;
+    height: 150px;
+    border: 1px solid #999;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 15%;
+    margin: auto;
+    /* background-color: black; */
+    /* z-index 在定位層才會有效，即需要設定 position  */
+    z-index: 1;
+    background-color: rgba(255, 255, 150, 0.7);
+    background-image: linear-gradient(to top, white 10%, #ccc 40%, #ccc 40%, white 100%);
+    background-blend-mode: multiply;
+    /* background-size: cover; */
+  }
+
+  .container::after {
+    content: "";
+    width: 300px;
+    height: 150px;
+    border: 1px solid #999;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 15%;
+    margin: auto;
+    /* background-color: black; */
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.7);
+    background-blend-mode: multiply;
+    background-image: linear-gradient(to top, white 10%, #ccc 40%, #ccc 40%, white 100%);
+  }
+
+  .syringe {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  .syringe::before {
+    content: "";
+    width: 70px;
+    height: 150px;
+    border: 1px solid #000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: black;
+    z-index: 4;
+  }
+
+  .syringe::after {
+    content: "";
+    width: 70px;
+    height: 150px;
+    border: 1px solid #999;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-radius: 10%;
+    left: 0;
+    margin: auto;
+    /* background-color: red; */
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.7);
+    background-image: linear-gradient(to top, white 10%, #ccc 40%, #ccc 40%, white 100%);
+  }
+
+  .box {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  .box::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    border: 1px solid #999;
+    /* background-color: yellow; */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 8%;
+    margin: auto;
+    border-radius: 10%;
+    background-color: rgba(255, 255, 255, 0.7);
+    background-image: linear-gradient(to top, white 10%, #ccc 35%, white 100%);
+  }
+
+  .box::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    border: 1px solid #999;
+    /* background-color: yellow; */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 5%;
+    margin: auto;
+    border-radius: 10%;
+    background-color: rgba(255, 255, 255, 0.7);
+    background-image: linear-gradient(to top, white 10%, #ccc 35%, white 100%);
+  }
+
+  .needle {
+    width: 150px;
+    height: 0px;
+    border: 1px solid #333;
+    background-color: #222;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -40px;
+    margin: auto;
+    z-index: -1;
+  }
+
+  p {
+    position: absolute;
+    bottom: 0;
+    left: 16%;
+    margin: auto;
+    z-index: 3;
+    font-family: '微軟正黑體';
+    font-size: 20px;
+    color: #666;
+  }
+
+  .scale {
+    position: absolute;
+    top: 0;
+    left: 15%;
+    margin: auto;
+    width: 630px;
+    height: 20px;
+    /* background-color: black; */
+    background-image: linear-gradient(to right, transparent 0%, transparent 90%, #333 100%);
+    z-index: 3;
+    background-size: 20px 20px;
+    background-repeat: repeat-x;
+  }
+</style>
+
+
+
+<body>
+  <div class="container">
+    <p>Made in Taiwan</p>
+    <div class="syringe">
+      <div class="scale"></div>
+      <div class="box">
+        <div class="needle"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

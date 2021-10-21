@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .head {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: black;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+  }
+
+  .head::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 15%;
+    margin: auto;
+    transform: translateX(-50%);
+    background-color: white;
+    border-radius: 50%;
+    border: 10px solid black;
+    height: 40px;
+    width: 40px;
+    border-spacing: 0px;
+  }
+
+  .head::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 15%;
+    margin: auto;
+    transform: translateX(50%);
+    background-color: white;
+    border-radius: 50%;
+    border: 10px solid black;
+    height: 40px;
+    width: 40px;
+    border-collapse: collapse;
+  }
+
+  .eyes {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .eyes::before {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    margin: auto;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: black;
+    border: 10px solid white;
+    width: 45px;
+    height: 45px;
+  }
+
+  .eyes::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    right: 30%;
+    margin: auto;
+    transform: translate(50%, -50%);
+    border-radius: 50%;
+    background: black;
+    border: 10px solid white;
+    width: 45px;
+    height: 45px;
+  }
+
+  .mouth {
+    height: 90px;
+    width: 130px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 45%;
+    left: 0;
+    margin: auto;
+    transform: translateY(50%);
+    background: white;
+  }
+
+  .mouth::before {
+    content: "";
+    height: 20px;
+    width: 30px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 80%;
+    left: 0;
+    margin: auto;
+    transform: translateY(50%);
+    background: black;
+  }
+
+  .mouth::after {
+    content: "";
+    height: 30px;
+    width: 80px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 35%;
+    left: 0;
+    margin: auto;
+    transform: translateY(50%);
+    background: black;
+  }
+
+  .red {
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  .red::before {
+    content: "";
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    position: absolute;
+    top: 45%;
+    right: -45%;
+    margin: auto;
+    transform: translate(50%, -50%);
+    background: red;
+  }
+
+  .red::after {
+    content: "";
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    position: absolute;
+    top: 45%;
+    left: -45%;
+    margin: auto;
+    transform: translate(-50%, -50%);
+    background: red;
+  }
+
+  .v {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  .v::before {
+    content: "";
+    position: absolute;
+    right: 50%;
+    bottom: -100%;
+    transform: translate(50%, 50%);
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    padding: 0px;
+    border-style: solid;
+    border-width: 45px 50px 50px 50px;
+    border-color: #fff transparent transparent transparent;
+  }
+
+  .v::after {
+    content: "";
+    position: absolute;
+    right: 50%;
+    bottom: -50%;
+    transform: translate(50%, 50%);
+    margin: auto;
+    padding: 0px;
+    border-style: solid;
+    border-width: 27px 30px 30px 30px;
+    border-color: black transparent transparent transparent;
+    /* outline: black solid 1px; */
+  }
+</style>
+
+
+
+<body>
+  <div class="head">
+    <div class="ears">
+      <div class="eyes">
+        <div class="mouth">
+          <div class="red">
+            <!-- 注意:不能放外層，原本想用 z-index 就需要放最外層，但如果這邊放最外層，網頁縮放會破壞結構 -->
+            <div class="v"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
